@@ -15,13 +15,10 @@ playbook (podman.yml)
                   -->git checkout (pipeline syntax generator, provide git credentials)
                   -->maven build 
                   -->Execute ansiblePlaybooK ( pipeline syntax-->ansibleplaybook
-                                                        
-                                                                    -->Ansible tool
-  
-                                                                                        ansible
-                                                                                        Playbook file path in workspace
-                                                                                        podman.yml
-                                                                                        Inventory file path in workspace
-                                                                                        dev.inv
+                                                                      -->Ansible tool-->ansible
+                                                                                         Playbook file path in workspace
+                                                                                            podman.yml
+                                                                                         Inventory file path in workspace
+                                                                                            dev.inv
                                                                                         SSH connection credentials
-                                                                                                    (.pem file key of dev server)
+                                                                                            (.pem file key of dev server)
