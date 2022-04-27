@@ -1,6 +1,6 @@
 ---
 
-- hosts: all
+- hosts: dev
   tasks:
           - name: install podman
             package:
