@@ -1,16 +1,16 @@
 ---
-
 - hosts: dev
+  become: True
   tasks:
-          - name: install podman
-            package:
-                    name: podman
-                    state: present
+    - name: install podman
+      package:
+        name: podman
+        state: present
 
-          - name: pull image
-            podman_image:
-                    name: docker.io/httpd:latest
+    - name: pull image
+      podman_image:
+        name: docker.io/httpd:latest
 
 
-          - name: create container
-            command: podman run -itd -p 40026:80 -v /home/:/usr/local/apache2/htdocs/ docker.io/httpd:latest
+    - name: create container
+      command: podman run -itd -p 40026:80 -v /home/:/usr/local/apache2/htdocs/ docker.io/httpd:latest
